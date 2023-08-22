@@ -1,0 +1,77 @@
+*{
+    padding: 0;
+    margin: 0;
+
+}
+
+body {
+    background-color: rgb(186, 178, 168);
+}
+.posters {
+    display: flex;
+    flex-wrap: wrap; /*Con flex grap me alinea todas las imagenes, adicionalmente la buelve responsive*/
+    background-color: rgb(186, 178, 168);
+}
+
+.posters > *{  /*Con esto le estoy diciendo que seleccione a todos los hijos de posters*/
+    cursor: pointer; /*Y con esto le estoy indicando que cuando este encima del elemento el cursor tome la forma de mano*/
+}
+
+.posters > div { /*Le estoy indicando que seleccione el div de p    oster*/
+    margin: 20px;
+    transition: ease-in 0.2s; /*Y esta linea hace que la transision se demore el tiempo indicado*/
+
+}
+
+.contenedor {
+
+        display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.year {
+    display: none;
+    position: absolute;
+    color: aliceblue;
+    font-size: xx-large;
+}
+
+
+.contenedor:hover{
+    transform: scale(0.9); /*Cambia el tamaño de la imagen. si se ler coloca 1, no va a pasar nada por que es el tamaño original*/
+}
+
+.contenedor:hover> img {
+    opacity: 0.2;
+    z-index: -1 ;
+}
+
+.contenedor:hover .year{
+    display: flex;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.buscar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.buscar >   input{
+    height: 60%;
+    width: 50%;
+    margin-right: 20px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.buscar > button{
+    height: 60%;
+    width: 10%;
+    border-radius: 10px;
+}
+    
+    
